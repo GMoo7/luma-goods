@@ -1,3 +1,5 @@
+@font-face{font-family:"Syne";src:url(../fonts/syne-latin-wght-normal.woff2) format("woff2");font-weight:400 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Figtree";src:url(../fonts/figtree-latin-wght-normal.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}
 :root{--mist:#F4F5F1;--ink:#2B3326;--ink-2:#4A5343;--butter:#EFD27A;--sage:#A9B8A0;--stone:#DADDD4;--white:#fff;--red:#A33A2B;
   --display:"Syne",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif;--wrap:1240px}
 *,*::before,*::after{box-sizing:border-box}
@@ -167,3 +169,18 @@ select{padding:10px 14px;border-radius:12px;border:1.5px solid var(--stone);back
 @media (max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
 .line-info .qty{align-self:flex-start;margin-top:4px}
 .foot .cols>div{min-width:0}@media (max-width:760px){.foot .cols>div:first-child,.foot .cols>div:last-child{grid-column:1/-1}}
+.demo-bar{display:flex;justify-content:center;gap:6px 16px;flex-wrap:wrap;background:#EFD27A;color:var(--ink);font-size:.84rem;padding:7px 16px;text-align:center}
+.demo-bar a{font-weight:700}
+.foot a{text-decoration:none}.foot .base a{color:#fff;text-decoration:underline}
+.promo-band>*{min-width:0}.promo-band .code{font-size:clamp(1.6rem,7vw,2.4rem);padding:16px}
+.sw{width:22px;height:22px}
+@media (max-width:900px){
+ .head .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;row-gap:4px}
+ .nav{display:flex;order:4;flex-basis:100%;overflow-x:auto;gap:20px;padding:6px 0 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;padding:6px 0}
+ .announce{font-size:.8rem}
+}
+.help{max-width:760px;padding-bottom:40px}.help section{padding:28px 0;border-top:1px solid var(--stone);scroll-margin-top:120px}
+.help table{width:100%;border-collapse:collapse;font-size:.95rem}.help th,.help td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--stone)}
+.help .tw{overflow-x:auto}
+.short{display:none}@media (max-width:600px){.long{display:none}.short{display:inline}.demo-bar{flex-wrap:nowrap;justify-content:space-between;text-align:left;font-size:.8rem}}

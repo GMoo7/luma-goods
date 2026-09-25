@@ -39,22 +39,24 @@ export function wireCards(root){
 const LOGO=`<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#EFD27A"/><path d="M26 10a11 11 0 1 0 0 20a13 13 0 0 1 0-20z" fill="#2B3326"/></svg>`;
 function header(){
   const path=location.pathname.split('/').pop()||'index.html';
+  const cat=new URLSearchParams(location.search).get('cat');
+  const catLink=c=>`<a href="shop.html?cat=${c.id}"${path==='shop.html'&&cat===c.id?' aria-current="page"':''}>${c.name}</a>`;
   const link=(h,t)=>`<a href="${h}"${path===h.split('?')[0]&&!h.includes('?')?' aria-current="page"':''}>${t}</a>`;
-  return `<div class="announce">Free shipping on orders over $${FREE_SHIP}. Code <b>LUMA10</b> takes 10% off your first order.</div>
+  return `<div class="demo-bar"><span><b>Concept store.</b> <span class="long">Luma Goods is fictional — no real orders or payments.</span><span class="short">Fictional, no real orders.</span></span><a href="https://github.com/GMoo7/luma-goods">View source</a></div><div class="announce"><span class="long">Free shipping on orders over $${FREE_SHIP}. Code <b>LUMA10</b> takes 10% off your first order.</span><span class="short">Free shipping over $${FREE_SHIP}. <b>LUMA10</b> = 10% off.</span></div>
   <header class="head"><div class="wrap">
     <a class="logo" href="index.html">${LOGO}<span>Luma Goods</span></a>
-    <nav class="nav" aria-label="Main">${link('shop.html','Shop all')}${CATEGORIES.slice(0,4).map(c=>link(`shop.html?cat=${c.id}`,c.name)).join('')}</nav>
+    <nav class="nav" aria-label="Main">${path==='shop.html'&&!cat?`<a href="shop.html" aria-current="page">Shop all</a>`:`<a href="shop.html">Shop all</a>`}${CATEGORIES.map(c=>catLink(c)).join('')}</nav>
     <form class="hsearch" action="shop.html" role="search"><label class="sr" for="hq">Search products</label><input id="hq" name="q" type="search" placeholder="Search"></form>
     <button class="cart-btn" aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="count" aria-live="polite">0</span></button>
   </div></header>`;
 }
 function footer(){
   return `<footer class="foot"><div class="wrap">
-  <div class="cols"><div><a class="logo" href="index.html">${LOGO}<span>Luma Goods</span></a><p>Everyday objects, made to last. A fictional store built as a portfolio demo.</p></div>
+  <div class="cols"><div><a class="logo" href="index.html">${LOGO}<span>Luma Goods</span></a><p>Everyday objects, made to last. A fictional store built as a portfolio concept.</p></div>
   <div><h4>Shop</h4><ul>${CATEGORIES.map(c=>`<li><a href="shop.html?cat=${c.id}">${c.name}</a></li>`).join('')}</ul></div>
-  <div><h4>Help</h4><ul><li>Shipping &amp; returns</li><li>Size guide</li><li>Care instructions</li><li>Contact us</li></ul></div>
+  <div><h4>Help</h4><ul><li><a href="help.html#shipping">Shipping</a></li><li><a href="help.html#returns">Returns</a></li><li><a href="help.html#sizes">Size guide</a></li><li><a href="help.html#care">Care instructions</a></li><li><a href="help.html#contact">Contact us</a></li></ul></div>
   <div><h4>Join the list</h4><form class="news" id="news"><label class="sr" for="ne">Email</label><input id="ne" type="email" placeholder="you@email.com" required><button>Sign up</button></form><p class="news-msg" role="status"></p></div></div>
-  <div class="base">© ${new Date().getFullYear()} Luma Goods — demo store. No real orders are placed. Built by Hashir.</div></div></footer>`;
+  <div class="base">© ${new Date().getFullYear()} Luma Goods — demo store. Concept store — no real orders are placed. Designed &amp; built by <a href="https://github.com/GMoo7">Hashir</a>.</div></div></footer>`;
 }
 function drawer(){
   return `<div class="scrim" hidden></div><aside class="drawer" aria-label="Cart" aria-hidden="true" tabindex="-1">

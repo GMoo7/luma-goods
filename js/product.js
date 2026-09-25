@@ -7,6 +7,7 @@ const params=new URLSearchParams(location.search);
 const p=byId(params.get('id'))||PRODUCTS[0];
 let color=p.colors.includes(params.get('color'))?params.get('color'):p.colors[0],size=null,qty=1,view=0;
 document.title=`${p.name} — Luma Goods`;
+document.querySelector('meta[name=description]').content=`${p.name}, ${money(p.price)}. ${p.desc}`.slice(0,158);
 const cat=CATEGORIES.find(c=>c.id===p.cat);
 $('#crumbs').innerHTML=`<a href="index.html">Home</a> / <a href="shop.html?cat=${cat.id}">${cat.name}</a> / <span>${p.name}</span>`;
 function gallery(){

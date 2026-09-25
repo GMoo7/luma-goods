@@ -56,7 +56,7 @@ function footer(){
   <div><h4>Shop</h4><ul>${CATEGORIES.map(c=>`<li><a href="shop.html?cat=${c.id}">${c.name}</a></li>`).join('')}</ul></div>
   <div><h4>Help</h4><ul><li><a href="help.html#shipping">Shipping</a></li><li><a href="help.html#returns">Returns</a></li><li><a href="help.html#sizes">Size guide</a></li><li><a href="help.html#care">Care instructions</a></li><li><a href="help.html#contact">Contact us</a></li></ul></div>
   <div><h4>Join the list</h4><form class="news" id="news"><label class="sr" for="ne">Email</label><input id="ne" type="email" placeholder="you@email.com" required><button>Sign up</button></form><p class="news-msg" role="status"></p></div></div>
-  <div class="base">© ${new Date().getFullYear()} Luma Goods — demo store. Concept store — no real orders are placed. Designed &amp; built by <a href="https://github.com/GMoo7">Hashir</a>.</div></div></footer>`;
+  <div class="base">© ${new Date().getFullYear()} Luma Goods — demo store. Concept store — no real orders are placed. Designed &amp; built by <a href="https://github.com/GMoo7">Mustufa Shaikh</a>.</div></div></footer>`;
 }
 function drawer(){
   return `<div class="scrim" hidden></div><aside class="drawer" aria-label="Cart" aria-hidden="true" tabindex="-1">

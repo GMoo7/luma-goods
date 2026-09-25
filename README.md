@@ -43,4 +43,4 @@ Tested in Chromium at 360px, 390px and 1440px widths: no horizontal scrolling, n
 
 ---
 
-Designed and built by [Hashir](https://github.com/GMoo7). Available for website projects for small and growing businesses.
+Designed and built by [Mustufa Shaikh](https://github.com/GMoo7). Available for website projects for small and growing businesses.

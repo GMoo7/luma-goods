@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop all — Luma Goods</title><meta name="description" content="Browse bags, watches, accessories, home and clothing.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><circle cx=%2220%22 cy=%2220%22 r=%2218%22 fill=%22%23EFD27A%22/><path d=%22M26 10a11 11 0 1 0 0 20a13 13 0 0 1 0-20z%22 fill=%22%232B3326%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/luma.css"></head><body>
+<main id="main">
+<div class="wrap shop-head"><h1 id="title">Shop all</h1><p>Search, filter and sort the full collection.</p></div>
+<div class="wrap shop">
+<aside class="filters" aria-label="Filters">
+<fieldset><legend>Category</legend><div id="f-cats"></div></fieldset>
+<fieldset><legend>Colour</legend><div id="f-colors"></div></fieldset>
+<fieldset><legend>Price</legend><label for="max">Up to <b id="maxv">$300</b></label><input type="range" id="max" min="20" max="300" step="10" value="300"></fieldset>
+<fieldset><legend>Availability</legend><label class="check"><input type="checkbox" id="stock"> In stock only</label><label class="check"><input type="checkbox" id="sale"> On sale</label></fieldset>
+</aside>
+<div>
+<div class="toolbar"><div class="search-box"><label class="sr" for="q">Search products</label><input id="q" type="search" placeholder="Search products"></div>
+<button class="btn ghost" id="filters-toggle" aria-expanded="false">Filters</button>
+<span id="count" aria-live="polite"></span>
+<label><span class="sr">Sort by</span><select id="sort"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating">Top rated</option></select></label></div>
+<div id="active"></div>
+<div class="grid" id="grid" style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))"></div>
+</div></div></main><script type="module" src="js/shop.js"></script></body></html>

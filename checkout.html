@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Luma Goods</title><meta name="description" content="Complete your order.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><circle cx=%2220%22 cy=%2220%22 r=%2218%22 fill=%22%23EFD27A%22/><path d=%22M26 10a11 11 0 1 0 0 20a13 13 0 0 1 0-20z%22 fill=%22%232B3326%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/luma.css"></head><body>
+<main id="main">
+<div class="wrap shop-head"><h1>Checkout</h1></div>
+<div class="wrap" id="checkout"><div class="co-grid">
+<form class="co" id="co" novalidate>
+<div class="demo-note"><span>Demo checkout — no payment is taken.</span><button type="button" class="link" id="fill">Fill with test details</button></div>
+<fieldset><legend>Contact</legend><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><p class="err"></p></div></fieldset>
+<fieldset><legend>Shipping address</legend>
+<div class="fr"><div class="field"><label for="first">First name</label><input id="first" name="first" autocomplete="given-name"><p class="err"></p></div><div class="field"><label for="last">Last name</label><input id="last" name="last" autocomplete="family-name"><p class="err"></p></div></div>
+<div class="field"><label for="addr">Street address</label><input id="addr" name="addr" autocomplete="street-address"><p class="err"></p></div>
+<div class="fr3"><div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2"><p class="err"></p></div>
+<div class="field"><label for="state">State</label><select id="state" name="state"><option>AL</option><option>AK</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>FL</option><option>GA</option><option>IL</option><option>MA</option><option>NY</option><option>OR</option><option>TX</option><option>WA</option></select><p class="err"></p></div>
+<div class="field"><label for="zip">ZIP</label><input id="zip" name="zip" inputmode="numeric" data-fmt="zip" autocomplete="postal-code"><p class="err"></p></div></div></fieldset>
+<fieldset id="shipopts"><legend>Delivery</legend>
+<label class="opt"><input type="radio" name="ship" value="standard" checked> Standard, 4–6 business days <b>Free over $90</b></label>
+<label class="opt"><input type="radio" name="ship" value="express"> Express, 1–2 business days <b>$18</b></label></fieldset>
+<fieldset><legend>Payment</legend>
+<div class="field"><label for="card">Card number</label><input id="card" name="card" inputmode="numeric" data-fmt="card" placeholder="4242 4242 4242 4242" autocomplete="cc-number"><p class="err"></p></div>
+<div class="fr"><div class="field"><label for="exp">Expiry</label><input id="exp" name="exp" inputmode="numeric" data-fmt="exp" placeholder="MM/YY" autocomplete="cc-exp"><p class="err"></p></div><div class="field"><label for="cvc">Security code</label><input id="cvc" name="cvc" inputmode="numeric" data-fmt="cvc" placeholder="123" autocomplete="cc-csc"><p class="err"></p></div></div></fieldset>
+<button class="btn block" id="pay">Place order</button>
+</form>
+<aside class="summary"><h2>Summary</h2><div id="sum"></div><a class="link" href="cart.html">Edit cart</a></aside>
+</div></div></main><script type="module" src="js/checkout.js"></script></body></html>

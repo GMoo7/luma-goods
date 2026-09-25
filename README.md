@@ -1,27 +1,46 @@
-# Luma Goods — E-commerce store (demo)
+# Luma Goods — E-commerce store
 
-A fictional lifestyle store selling bags, watches, accessories, home goods and clothing. Built as a portfolio piece to show a complete shopping flow without a backend.
+> **Concept project.** Luma Goods is a fictional business created for a web design portfolio. All names, people, reviews, figures and prices are samples. No real orders, payments or messages are processed.
 
-**Live demo:** https://gmoo7.github.io/luma-goods/
+**[View the live demo →](https://gmoo7.github.io/luma-goods/)**
+
+A complete online store for a fictional lifestyle brand selling bags, watches, accessories, home goods and clothing. It runs entirely in the browser, with no backend.
+
+![Luma Goods home page](docs/desktop-home.png)
 
 ## Features
-- **Home** — interactive hero (recolour the collection), categories, new arrivals, promo, best sellers, reviews
-- **Shop** — live search, category filter, colour filter, price slider, in-stock and on-sale toggles, five sort orders, removable filter pills. Filters sync to the URL, so any result set is shareable.
-- **Product page** — three-view gallery, colour variants that redraw the product image, size selection with validation, quantity, stock status, related products
-- **Cart** — slide-out mini cart plus full cart page, quantity controls, free-shipping progress bar, promo code (`LUMA10`)
-- **Checkout** — shipping and payment form with formatting, validation (including a Luhn card check), delivery options and an order confirmation
 
-Use card `4242 4242 4242 4242` or the **Fill with test details** button. No payment is taken.
+- **Shop**: live search, category, colour and price filters, stock and sale toggles, five sort orders. Filters are kept in the URL, so any result can be shared.
+- **Product page**: three-view gallery, colour variants that redraw the product image, size selection with validation, quantity and stock status
+- **Cart**: slide-out mini cart and full cart page, quantity controls, free-shipping progress, promo code `LUMA10`
+- **Checkout**: address and payment form with formatting and validation, delivery options and an order confirmation. Use card `4242 4242 4242 4242` or the “Fill with test details” button.
+- **Help page**: shipping, returns, size guide, care and contact
+- The cart persists across page loads and stays in sync across browser tabs
 
-## Architecture
-Vanilla JavaScript ES modules, no framework or build step:
+## Screenshots
 
-| File | Role |
-|---|---|
-| `js/data.js` | Product catalogue, categories, colours |
-| `js/cart.js` | Cart store — `localStorage` persistence, change events, cross-tab sync |
-| `js/art.js` | Generates SVG product images so colour variants update the picture |
-| `js/ui.js` | Shared header, footer, product cards, cart drawer, totals |
-| `js/*.js` | One module per page |
+| ![Home](docs/desktop-home.png) | ![Shop](docs/desktop-shop.png) |
+|:--:|:--:|
+| Home | Shop |
+| ![Product page](docs/desktop-product.png) | ![Checkout](docs/desktop-checkout.png) |
+| Product page | Checkout |
 
-_All products and reviews are fictional._
+### Mobile
+
+<p><img src="docs/mobile-home.png" width="260" alt="Home on mobile"> &nbsp; <img src="docs/mobile-shop.png" width="260" alt="Shop on mobile"></p>
+
+## Built with
+
+Vanilla JavaScript ES modules with no framework and no build step. `js/cart.js` is the cart store (localStorage and change events); `js/art.js` generates the SVG product images; each page has its own module. Fonts are self-hosted.
+
+## Run it locally
+
+Serve the folder with any static server (ES modules do not load from `file://`), for example `npx serve .`
+
+## Quality checks
+
+Tested in Chromium at 360px, 390px and 1440px widths: no horizontal scrolling, no broken links, no JavaScript errors, and every button and form tested end to end.
+
+---
+
+Designed and built by [Hashir](https://github.com/GMoo7). Available for website projects for small and growing businesses.

@@ -2,7 +2,7 @@
 
 > **Concept project.** Luma Goods is a fictional business created for a web design portfolio. All names, people, reviews, figures and prices are samples. No real orders, payments or messages are processed.
 
-**[View the live demo →](https://gmoo7.github.io/luma-goods/)**
+**[View the live demo →](https://mustufashaikh.github.io/luma-goods/)**
 
 A complete online store for a fictional lifestyle brand selling bags, watches, accessories, home goods and clothing. It runs entirely in the browser, with no backend.
 
@@ -43,4 +43,4 @@ Tested in Chromium at 360px, 390px and 1440px widths: no horizontal scrolling, n
 
 ---
 
-Designed and built by [Mustufa Shaikh](https://github.com/GMoo7). Available for website projects for small and growing businesses.
+Designed and built by [Mustufa Shaikh](https://github.com/mustufashaikh). Available for website projects for small and growing businesses.
